@@ -62,6 +62,9 @@ return {
 								ignore = { "W391" },
 								maxLineLength = 100,
 							},
+              jedi = {
+                environment = "/usr/bin/python"
+              }
 						},
 					},
 				},
