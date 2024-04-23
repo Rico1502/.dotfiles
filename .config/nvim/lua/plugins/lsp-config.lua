@@ -13,11 +13,13 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"clangd",
+					"cmake",
 					"rust_analyzer",
 					"taplo",
 					"jsonls",
 					"pylsp",
 					"ruff_lsp",
+          "marksman",
 					"nil_ls",
 				},
 			})
@@ -33,6 +35,20 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.clangd.setup({
+				capabilities = capabilities,
+				cmd = { "clangd" },
+				single_file_support = true,
+				root_dir = lspconfig.util.root_pattern(
+					".clangd",
+					".clang-tidy",
+					".clang-format",
+					"compile_commands.json",
+					"compile_flags.txt",
+					"configure.ac",
+					".git"
+				),
+			})
+			lspconfig.cmake.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.rust_analyzer.setup({
@@ -62,9 +78,9 @@ return {
 								ignore = { "W391" },
 								maxLineLength = 100,
 							},
-              jedi = {
-                environment = "/usr/bin/python"
-              }
+							jedi = {
+								environment = "/usr/bin/python",
+							},
 						},
 					},
 				},
@@ -76,6 +92,9 @@ return {
 						args = {},
 					},
 				},
+				capabilities = capabilities,
+			})
+			lspconfig.marksman.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.nil_ls.setup({
