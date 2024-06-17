@@ -4,7 +4,7 @@ return {
 		config = function()
 			require("autoclose").setup({
 				keys = {
-					["'"] = { escape = false, close = true, pair = "''", disabled_filetypes = {"rust"} },
+					["'"] = { escape = false, close = true, pair = "''", disabled_filetypes = { "rust" } },
 				},
 			})
 		end,
