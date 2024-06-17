@@ -5,7 +5,6 @@ return {
 			require("mason").setup()
 		end,
 	},
-
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
@@ -14,12 +13,11 @@ return {
 					"lua_ls",
 					"clangd",
 					"cmake",
-					"rust_analyzer",
 					"taplo",
 					"jsonls",
 					"pylsp",
 					"ruff_lsp",
-          "marksman",
+					"marksman",
 					"nil_ls",
 				},
 			})
@@ -29,7 +27,6 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
@@ -50,19 +47,6 @@ return {
 			})
 			lspconfig.cmake.setup({
 				capabilities = capabilities,
-			})
-			lspconfig.rust_analyzer.setup({
-				capabilities = capabilities,
-				settings = {
-					["rust_analyzer"] = {
-						check = {
-							command = "clippy",
-						},
-						diagnostics = {
-							enable = true,
-						},
-					},
-				},
 			})
 			lspconfig.taplo.setup({
 				capabilities = capabilities,
