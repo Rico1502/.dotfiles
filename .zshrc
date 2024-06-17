@@ -147,3 +147,5 @@ export EDITOR='nvim'
 
 alias r='rfm --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 # source $HOME/.venvs/MyEnv/bin/activate
+eval "$(direnv hook zsh)"
+source $HOME/.nix-profile/share/nix-direnv/direnvrc
