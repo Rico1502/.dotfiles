@@ -6,5 +6,4 @@ vim.cmd("set relativenumber")
 vim.cmd("inoremap jk <ESC>")
 vim.cmd("inoremap jj <ESC>")
 vim.g.mapleader = " "
-vim.cmd("nnoremap <silent> <leader>cs :let @/ = \"\"<CR>")
-
+vim.cmd('nnoremap <silent> <leader>cs :let @/ = ""<CR>')
