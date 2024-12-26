@@ -82,7 +82,6 @@ setopt globdots
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   aliases
-  ag
 
   catimg
   colorize  
@@ -92,7 +91,6 @@ plugins=(
   
   dirhistory
 
-  fd
   fig
   fzf
   fzf-tab

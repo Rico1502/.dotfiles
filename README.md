@@ -21,7 +21,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 Then install all necessary packages through your package manager, e.g.:
 
 ```bash
-sudo pamac install stow rust zoxide unzip fzf lazygit
+pamac install stow rust zoxide unzip fzf lazygit
 ```
 
 After that you can update the git submodules:
